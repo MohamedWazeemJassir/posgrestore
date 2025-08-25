@@ -1,26 +1,37 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+<h1 align="center">✨ PERN Stack Tutorial ✨</h1>
 
-.env
+Highlights:
 
-node_modules
-dist
-dist-ssr
-*.local
+- 🌟 Tech stack: PERN + TailwindCSS + Daisy UI
+- 🚀 Rate Limiting & Bot Detection
+- 👌 Global state management with Zustand
+- 🐞 Error handling both on the server and client
+- ⭐ Deployment for FREE!
+- ⏳ And much more!
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+### Setup .env file
+
+```js
+PORT=3000
+
+PGUSER=...
+PGPASSWORD=...
+PGHOST=...
+PGDATABASE=...
+
+ARCJET_KEY=...
+ARCJET_ENV=development
+```
+
+### Run the API
+
+```shell
+npm run dev
+```
+
+### Run the frontend
+
+```shell
+cd frontend
+npm run dev
+```
