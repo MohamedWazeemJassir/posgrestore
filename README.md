@@ -1,4 +1,4 @@
-<h1 align="center">✨ PERN Stack Tutorial ✨</h1>
+<h1 align="center">✨ PERN Stack Project ✨</h1>
 
 Highlights:
 
