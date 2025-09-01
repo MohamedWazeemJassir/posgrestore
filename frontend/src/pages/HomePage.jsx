@@ -5,16 +5,23 @@ import ProductCard from "../components/ProductCard";
 import AddProductModal from "../components/AddProductModal";
 
 function HomePage() {
-  const { products, loading, error, fetchProducts } = useProductStore();
+  const { products, loading, error, fetchProducts, resetForm } =
+    useProductStore();
 
   useEffect(() => {
     fetchProducts();
   }, [fetchProducts]);
   console.log("Products:", products);
+
+  const handleAddProductClick = () => {
+    resetForm();
+    document.getElementById("add_product_modal").showModal();
+  };
   return (
     <main className="max-w-6xl mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-8">
-        <button className="btn btn-primary" onClick={() => document.getElementById("add_product_modal").showModal()}>
+        {/* <button className="btn btn-primary" onClick={() => document.getElementById("add_product_modal").showModal()}> */}
+        <button className="btn btn-primary" onClick={handleAddProductClick}>
           <PlusCircleIcon className="size-5 mr-2" />
           Add Product
         </button>
@@ -27,7 +34,7 @@ function HomePage() {
 
       {error && <div className="alert alert-error mb-8">{error}</div>}
 
-      {products.length === 0 && !loading &&(
+      {products.length === 0 && !loading && (
         <div className="flex flex-col justify-center items-center h-96 space-y-4">
           <div className="bg-base-100 rounded-full p-6">
             <PackageIcon className="size-12" />
